@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de João Pedro, desenvolvedor em formação.">
+    <title>JP.dev | Desenvolvedor Web</title>
+    <link rel="icon" href="img/JP.dev-logofull.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho e navegação -->
+    <header>
+        <nav aria-label="Navegação principal">
+            <a href="#hero" class="logo">
+                <img src="img/JP.dev-logofull.png" alt="JP.dev — página inicial">
+            </a>
+
+            <ul id="menu">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <button type="button" id="menu-toggle" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Apresentação inicial -->
+        <section id="hero">
+            <div>
+                <p id="saudacao">Olá! Seja bem-vindo.</p>
+                <h1>João Pedro</h1>
+                <h2>Desenvolvedor em formação.</h2>
+
+                <p>
+                    Sou estudante da área de tecnologia e estou desenvolvendo
+                    minhas habilidades em programação e criação de sites.
+                </p>
+
+                <a href="#projetos">Conheça meus projetos</a>
+                <a href="#sobre-mim">Sobre mim</a>
+            </div>
+
+            <img src="img/avatar.png" alt="Avatar que representa João Pedro">
+        </section>
+
+        <!-- Sobre mim -->
+        <section id="sobre-mim">
+            <h2>Sobre mim</h2>
+
+            <p>
+                Sou estudante de Desenvolvimento de Sistemas e estou construindo
+                minha trajetória na área de tecnologia. Tenho interesse em
+                desenvolvimento web e gosto de transformar ideias em projetos
+                funcionais.
+            </p>
+
+            <p>
+                Neste portfólio, apresento alguns dos trabalhos que desenvolvi
+                durante meus estudos, mostrando o que venho aprendendo com
+                HTML, CSS e JavaScript.
+            </p>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <p>Algumas das tecnologias que venho estudando:</p>
+
+            <ul>
+                <li>
+                    <h3>HTML</h3>
+                    <p>Aprendendo a estruturar páginas de forma semântica.</p>
+                    <span>Nível: praticando</span>
+                </li>
+
+                <li>
+                    <h3>CSS</h3>
+                    <p>Aprendendo a criar layouts e páginas responsivas.</p>
+                    <span>Nível: praticando</span>
+                </li>
+
+                <li>
+                    <h3>JavaScript</h3>
+                    <p>Praticando lógica de programação e interatividade.</p>
+                    <span>Nível: aprendendo</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Projetos -->
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+
+            <div class="projetos-container">
+                <article class="projeto-card">
+                    <h3>Elementar</h3>
+                    <p>Uma tabela periódica interativa, com pesquisa, filtros e recursos de acessibilidade.</p>
+                    <a href="https://github.com/jotapocket/SiteElementar" target="_blank" rel="noopener noreferrer">Ver
+                        projeto ↗</a>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>Mostra Científica</h3>
+                    <p>Um site desenvolvido para apresentar conteúdos e atividades de uma mostra científica.</p>
+                    <a href="https://github.com/jotapocket/Site-MostraCientifica" target="_blank"
+                        rel="noopener noreferrer">Ver projeto ↗</a>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>SmashPoint</h3>
+                    <p>Um projeto de site de delivery, com produtos, descrições e preços.</p>
+                    <a href="https://github.com/jotapocket/UC14---HTML-CSS" target="_blank"
+                        rel="noopener noreferrer">Ver projeto ↗</a>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- Contato -->
+        <section id="contato">
+            <h2>Contato</h2>
+
+            <p>
+                Tem alguma dúvida ou quer conversar sobre meus projetos?
+                Envie uma mensagem pelo formulário abaixo.
+            </p>
+
+            <form id="form-contato" action="https://formsubmit.app/f/c8et5dwswp" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="Nova mensagem pelo portfólio JP.dev">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display: none;">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" required>
+                    <small id="erro-nome"></small>
+                </div>
+
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <small id="erro-email"></small>
+                </div>
+
+                <div>
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" minlength="20" required></textarea>
+                    <small id="erro-mensagem"></small>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="consentimento" name="consentimento" required>
+
+                    <label for="consentimento">
+                        Concordo com o uso dos dados enviados para responder
+                        a esta mensagem.
+                    </label>
+
+                    <small id="erro-consentimento"></small>
+                </div>
+
+                <p>
+                    Os dados serão utilizados apenas para responder à mensagem.
+                </p>
+
+                <button type="submit">Enviar mensagem</button>
+
+                <p id="mensagem-sucesso" role="status" aria-live="polite"></p>
+            </form>
+
+            <p>
+                Meu GitHub:
+                <a href="https://github.com/jotapocket" target="_blank" rel="noopener noreferrer">
+                    github.com/jotapocket
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>
+            &copy; <span id="ano-atual">2026</span> João Pedro.
+            Desenvolvido com HTML, CSS e JavaScript.
+        </p>
+
+        <a href="#hero">Voltar ao topo ↑</a>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
