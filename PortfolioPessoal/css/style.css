@@ -1,4 +1,3 @@
-
 /* ========================================
    JP.dev — IDENTIDADE VISUAL
    ======================================== */
@@ -217,15 +216,13 @@ nav {
     padding-top: 5rem;
     padding-bottom: 5rem;
     background:
-        radial-gradient(
-            circle at 85% 45%,
+        radial-gradient(circle at 85% 45%,
             rgba(215, 38, 56, 0.09),
-            transparent 32%
-        ),
+            transparent 32%),
         var(--preto-secundario);
 }
 
-#hero > div {
+#hero>div {
     flex: 1;
     max-width: 700px;
 }
@@ -337,12 +334,12 @@ nav {
     background-color: var(--preto-principal);
 }
 
-#habilidades > p {
+#habilidades>p {
     margin-bottom: 2rem;
     color: var(--cor-texto-secundario);
 }
 
-#habilidades > ul {
+#habilidades>ul {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
@@ -351,7 +348,7 @@ nav {
     list-style: none;
 }
 
-#habilidades > ul > li {
+#habilidades>ul>li {
     min-width: 0;
     padding: 1.7rem;
     border: var(--borda-escura);
@@ -362,7 +359,7 @@ nav {
         border-color var(--transicao);
 }
 
-#habilidades > ul > li:hover {
+#habilidades>ul>li:hover {
     transform: translateY(-5px);
     border-top-color: var(--vermelho-destaque);
 }
@@ -435,6 +432,15 @@ nav {
     line-height: 1.8;
 }
 
+.projeto-imagem {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-top: 1rem;
+    border: 2px solid var(--dourado-especial);
+}
+
 .projeto-card a {
     display: inline-block;
     margin-top: 1.2rem;
@@ -469,7 +475,7 @@ nav {
     background-color: var(--vermelho-destaque);
 }
 
-#contato > p {
+#contato>p {
     color: #444444;
 }
 
@@ -484,7 +490,7 @@ nav {
     background-color: #F7F7F7;
 }
 
-#form-contato > div {
+#form-contato>div {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -520,7 +526,7 @@ nav {
     resize: vertical;
 }
 
-#form-contato > div:has(input[type="checkbox"]) {
+#form-contato>div:has(input[type="checkbox"]) {
     flex-direction: row;
     align-items: flex-start;
     gap: 0.7rem;
@@ -539,7 +545,7 @@ nav {
     font-size: 0.82rem;
 }
 
-#form-contato > p {
+#form-contato>p {
     margin: 0;
     color: #555555;
     font-size: 0.85rem;
@@ -570,7 +576,7 @@ nav {
     font-weight: 600;
 }
 
-#contato > p:last-child a {
+#contato>p:last-child a {
     color: #A51D2A;
     font-weight: 700;
     overflow-wrap: anywhere;
@@ -627,7 +633,7 @@ footer a:hover {
         width: min(35%, 260px);
     }
 
-    #habilidades > ul,
+    #habilidades>ul,
     .projetos-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -635,6 +641,11 @@ footer a:hover {
     footer {
         padding-right: 5%;
         padding-left: 5%;
+    }
+
+    .sobre-mim-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
@@ -708,7 +719,7 @@ footer a:hover {
         font-size: 0.85rem;
     }
 
-    #habilidades > ul,
+    #habilidades>ul,
     .projetos-container {
         grid-template-columns: 1fr;
     }
@@ -722,11 +733,21 @@ footer a:hover {
         align-items: flex-start;
         padding: 2rem 6%;
     }
+
+    .sobre-mim-destaques {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .destaque-card {
+        min-height: 150px;
+        padding: 1rem;
+    }
 }
 
 /* 12. ACESSIBILIDADE — MENOS ANIMAÇÕES */
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -755,4 +776,63 @@ header {
     transform: translateY(-20%);
     width: 100px;
     max-height: none;
+}
+
+/* SOBRE MIM — LAYOUT E DESTAQUES */
+
+.sobre-mim-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sobre-mim-texto p {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: #444444;
+    line-height: 1.9;
+}
+
+.sobre-mim-destaques {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.destaque-card {
+    min-height: 165px;
+    padding: 1.3rem;
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-top: 3px solid var(--dourado-especial);
+    background-color: #F7F7F7;
+    transition:
+        transform var(--transicao),
+        border-color var(--transicao),
+        box-shadow var(--transicao);
+}
+
+.destaque-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--vermelho-destaque);
+    box-shadow: var(--sombra);
+}
+
+.destaque-card span {
+    color: var(--dourado-especial);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.destaque-card h3 {
+    margin: 0.5rem 0;
+    color: var(--preto-principal);
+    font-size: 1.05rem;
+}
+
+.destaque-card p {
+    margin: 0;
+    color: #555555;
+    font-size: 0.85rem;
+    line-height: 1.6;
 }
